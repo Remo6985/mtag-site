@@ -6,11 +6,11 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "M-TAG — Secure · Authentic · Connected",
+  title: "M-TAG: Secure, Authentic, Connected",
   description:
     "Smart Tag RFID untuk proteksi keaslian produk dan otomasi inventaris UMKM Indonesia.",
   openGraph: {
-    title: "M-TAG — Secure · Authentic · Connected",
+    title: "M-TAG: Secure, Authentic, Connected",
     description:
       "Smart Tag RFID untuk proteksi keaslian produk dan otomasi inventaris UMKM Indonesia.",
     type: "website",

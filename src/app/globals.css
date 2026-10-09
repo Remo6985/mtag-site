@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 /*
-  M-TAG theme — light lock (deck: white/blue/grey).
-  Radius rule: interactive = pill (rounded-full), cards/inputs = rounded-2xl.
-  Accent locked: blue-700 family only.
+  M-TAG theme - light lock (reference deck: white/blue/grey, accent #0000c8).
+  Radius rule: interactive = pill (rounded-full), cards/images = rounded-2xl/3xl.
 */
 :root {
-  --background: #ffffff;
-  --ink: #0b1220;
-  --muted: #566072;
-  --line: #e5e8ef;
-  --surface: #f4f6fa;
-  --accent: #1d4ed8;
-  --accent-strong: #173ea8;
-  --accent-soft: #e8eefc;
+  /* Palette from reference deck "White Blue and Grey": bg f0f0f0, accent 0000c8, neutral greys. */
+  --background: #fafafa;
+  --ink: #0a0a0a;
+  --muted: #5c5c60;
+  --line: #e2e2e4;
+  --surface: #f0f0f0;
+  --accent: #0000c8;
+  --accent-strong: #0000a8;
+  --accent-soft: #e9e9f8;
 }
 
 @theme inline {
