@@ -1,0 +1,6 @@
+:HL["/mtag-site/_next/static/chunks/1gorbcz5-1r6q.css","style"]
+:HL["/mtag-site/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/mtag-site/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["https://picsum.photos/seed/mtag-batik-boutique/1200/900","image"]
+1:[["children",{"s":"__PAGE__","h":160}]]
+0:{"b":"Vo7tHsZ-Oegk1u2xxF6g8","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
