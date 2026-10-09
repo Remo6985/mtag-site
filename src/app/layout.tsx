@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: "M-TAG — Secure · Authentic · Connected",
   description:
     "Smart Tag RFID untuk proteksi keaslian produk dan otomasi inventaris UMKM Indonesia.",
-  metadataBase: new URL("https://mtag.id"),
   openGraph: {
     title: "M-TAG — Secure · Authentic · Connected",
     description:

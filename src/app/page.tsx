@@ -9,6 +9,7 @@ import {
   DeviceMobile,
   Scan,
   SealCheck,
+  List,
 } from "@phosphor-icons/react/dist/ssr";
 
 const NAV = [
@@ -102,7 +103,7 @@ const PRODUCTS = [
     icon: DeviceMobile,
     label: "Software",
     name: "Aplikasi Scanner & Middleware",
-    body: "Scan langsung dari ponsel untuk verifikasi keaslian, plus middleware untuk POS/ERP Anda.",
+    body: "Verifikasi keaslian lewat aplikasi scanner, plus middleware untuk POS/ERP Anda.",
     bullets: [
       "Verifikasi konsumen cukup 1x scan",
       "Integrasi POS/ERP siap pakai",
@@ -143,9 +144,18 @@ const MARKET = [
 
 const VALIDATION = [
   { value: "58", label: "Responden survei UMKM & konsumen" },
-  { value: "51", label: "Inventaris masih manual & sulit" },
-  { value: "46", label: "Verifikasi keaslian bermasalah" },
-  { value: "42", label: "Ingin sistem stok terintegrasi" },
+  {
+    title: "Pemalsuan produk masih jadi ancaman besar",
+    body: "Mayoritas responden kesulitan memverifikasi keaslian produk secara mandiri.",
+  },
+  {
+    title: "Inventaris manual menyulitkan",
+    body: "Pencatatan stok manual dianggap lambat dan rawan selisih.",
+  },
+  {
+    title: "Model langganan lebih diminati",
+    body: "UMKM lebih nyaman dengan biaya berlangganan dibanding beli hardware langsung.",
+  },
 ];
 
 const TEAM = [
@@ -193,6 +203,34 @@ export default function Home() {
               </a>
             ))}
           </nav>
+          <details className="relative md:hidden">
+            <summary
+              className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-full border border-line [&::-webkit-details-marker]:hidden"
+              aria-label="Buka menu navigasi"
+            >
+              <List className="h-5 w-5" aria-hidden />
+            </summary>
+            <nav
+              className="absolute right-0 top-12 w-48 rounded-2xl border border-line bg-white p-2 shadow-xl shadow-accent/5"
+              aria-label="Navigasi seluler"
+            >
+              {NAV.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="block rounded-xl px-4 py-2.5 text-sm font-medium text-muted hover:bg-surface hover:text-ink"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <a
+                href="#kontak"
+                className="mt-1 block rounded-xl bg-accent px-4 py-2.5 text-center text-sm font-semibold text-white"
+              >
+                Hubungi Kami
+              </a>
+            </nav>
+          </details>
           <a
             href="#kontak"
             className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white transition hover:bg-accent-strong active:translate-y-px"
@@ -242,8 +280,8 @@ export default function Home() {
                 <div className="rounded-2xl border border-line bg-white p-5 shadow-xl shadow-accent/5">
                   <div className="flex items-center justify-between border-b border-line pb-3">
                     <p className="text-sm font-semibold">Inventaris Real-Time</p>
-                    <span className="rounded-full bg-accent-soft px-2.5 py-0.5 text-xs font-semibold text-accent">
-                      Live
+                    <span className="rounded-full bg-surface px-2.5 py-0.5 text-xs font-semibold text-muted">
+                      Ilustrasi produk
                     </span>
                   </div>
                   <div className="mt-4 space-y-3">
@@ -269,7 +307,7 @@ export default function Home() {
                   </span>
                   <div>
                     <p className="text-sm font-semibold">Scan berhasil</p>
-                    <p className="text-xs text-muted">Produk asli · 0,3 detik</p>
+                    <p className="text-xs text-muted">Produk asli, terverifikasi</p>
                   </div>
                 </div>
               </div>
@@ -412,9 +450,21 @@ export default function Home() {
             </h2>
             <div className="reveal mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {VALIDATION.map((item) => (
-                <div key={item.label} className="rounded-2xl border border-line bg-white p-7">
-                  <p className="text-5xl font-bold tracking-tight text-accent">{item.value}</p>
-                  <p className="mt-3 text-sm font-medium leading-snug">{item.label}</p>
+                <div
+                  key={item.value ?? item.title}
+                  className="rounded-2xl border border-line bg-white p-7"
+                >
+                  {item.value ? (
+                    <>
+                      <p className="text-5xl font-bold tracking-tight text-accent">{item.value}</p>
+                      <p className="mt-3 text-sm font-medium leading-snug">{item.label}</p>
+                    </>
+                  ) : (
+                    <>
+                      <h3 className="font-semibold leading-snug">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
+                    </>
+                  )}
                 </div>
               ))}
             </div>
@@ -462,10 +512,10 @@ export default function Home() {
                   yang sesuai untuk UMKM.
                 </p>
                 <a
-                  href="mailto:halo@mtag.id"
+                  href="mailto:nuruddin.affandi@binus.ac.id"
                   className="mt-8 inline-block rounded-full bg-white px-7 py-3.5 font-semibold text-accent transition hover:bg-white/90 active:translate-y-px"
                 >
-                  halo@mtag.id
+                  nuruddin.affandi@binus.ac.id
                 </a>
               </div>
               <ul className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
